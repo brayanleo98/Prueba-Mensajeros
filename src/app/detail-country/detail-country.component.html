@@ -1,0 +1,35 @@
+<div class="divCard">
+    <button nbButton (click)="back()" class="btn">
+        <nb-icon icon="arrow-back-outline"></nb-icon>Back
+    </button>
+</div>
+<div class="row divCard">
+    <img [src]="country.flag" alt="flag" class="flag col-lg-5 col-12">
+
+    <div class="col-lg-6 col-12 conDiv">
+        <h3 style="text-transform: capitalize;"><strong>{{country.name}}</strong></h3>
+        <div class="divText">
+            <div>
+                <p><strong>Native Name: </strong>{{country.nativeName}}</p>
+                <p><strong>Population: </strong>{{country.population}}</p>
+                <p><strong>Region: </strong>{{country.region}}</p>
+                <p><strong>Sub Region: </strong>{{country.subregion}}</p>
+                <p><strong>Capital: </strong>{{country.capital}}</p>
+            </div>
+
+            <div class="margin">
+                <p><strong>Top Level Domain: </strong>{{country.topLevelDomain}}</p>
+                <p><strong>Currencies: </strong>{{country.currencies}}</p>
+                <p><strong>Languages: </strong>{{country.languages}}</p>
+            </div>
+        </div>
+        <div>
+            <strong>Border Countries: </strong>
+            <div class="divBtn">
+                <button class="listBtn btn" (click)="search(bor)" size="tiny" nbButton
+                    *ngFor="let bor of listBord">{{bor}}</button>
+            </div>
+        </div>
+    </div>
+
+</div>

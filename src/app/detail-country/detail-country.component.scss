@@ -1,0 +1,74 @@
+.btn {
+    box-shadow: 0 1px 9px 2px hsl(206, 23%, 12%),
+        0 2px 1px 0 hsl(206, 23%, 12%),
+        0 1px 3px 0 hsl(206, 23%, 12%);
+    
+}
+
+.flag {
+    max-height   : 100%;
+    min-height   : 20px;
+    min-width    : 10px;
+    border-radius: 0.25rem;
+    object-fit   : contain;
+}
+
+.divCard {
+    justify-content: space-between;
+    margin-top     : 5%;
+    margin-left    : 2%;
+}
+
+.divText {
+    display        : flex;
+    margin-top     : 6%;
+    margin-bottom  : 6%;
+    justify-content: space-between;
+}
+
+.margin {
+    // margin-top: 13%;
+    // margin-bottom: 13%;
+}
+
+.listBtn {
+    margin-right: 3%;
+    margin-top  : 2%;
+}
+
+.conDiv {
+    margin-top   : auto;
+    margin-bottom: auto;
+    padding-left : 1%;
+    padding-right: 8%;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+.divBtn {
+    display: block;
+}
+
+@media screen and (max-width:375px) {
+    .divText {
+        display: block !important;
+    }
+
+    .conDiv {
+        margin-top   : 13%;
+        margin-bottom: auto;
+        padding-left : calc(var(--bs-gutter-x) * .5);
+        padding-right: calc(var(--bs-gutter-x) * .5);
+    }
+
+    .margin {
+        margin-top   : 13%;
+        margin-bottom: 13%;
+    }
+
+    .divBtn {
+        margin-bottom: 4%;
+    }
+}

@@ -1,0 +1,17 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+    <div class="title">
+      <h3 class="txtH3">Where in the world?</h3>
+      <button class="txtBtn" nbButton ghost (click)="changeTheme()">
+        <nb-icon icon="moon-outline"></nb-icon>{{msjTheme}}
+      </button>
+    </div>
+  </nb-layout-header>
+
+  <nb-layout-column>
+
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+</nb-layout>

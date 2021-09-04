@@ -1,0 +1,24 @@
+<div class="title">
+    <nb-form-field>
+        <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+        <input type="text" nbInput id="list_filter" [(ngModel)]="filterInput" placeholder="Search for a country"
+        name="filterInput">
+    </nb-form-field>
+    <nb-select class="margin" placeholder="Filter by Region" [formControl]="selectRegion" (selectedChange)="filterByRegion()">
+        <nb-option *ngFor="let region of listRegion" [value]="region" >{{region}}</nb-option>
+    </nb-select>
+</div>
+<div class="row divCard">
+    <nb-card class="col-lg-3 p-0 sCard" *ngFor="let country of listCountries | filterName:filterInput" (click)="selectCountry(country)">
+        <nb-card-header class="p-0 d-flex">
+            <img [src]="country.flag" alt="flag" class="flag">
+        </nb-card-header>
+        <nb-card-body>
+            <h6 style="text-transform: capitalize;"><strong>{{country.name}}</strong></h6>
+            <p><strong>Population: </strong>{{country.population}}<br>
+            <strong>Region: </strong>{{country.region}}<br>
+            <strong>Capital: </strong>{{country.capital}}</p>
+        </nb-card-body>
+    </nb-card>
+
+</div>
