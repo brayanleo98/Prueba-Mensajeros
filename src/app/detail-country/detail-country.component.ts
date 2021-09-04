@@ -26,13 +26,13 @@ export class DetailCountryComponent implements OnInit {
   getData() {
     this.listBord = [];
     this.country = this.listAllCountries.find(c => c.name === this.request.getNameCountry());
-    console.log(this.country);
+    // console.log(this.country);
     this.country.borders.forEach(element => {
-      console.log(element);
+      // console.log(element);
       let aux = this.listAllCountries.filter(c => c.alpha3Code === element);
       this.listBord.push(aux[0].name);
     });
-    console.log(this.listBord);
+    // console.log(this.listBord);
   }
 
   back() {

@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
     private router: Router) {
     this.themeService.onThemeChange()
       .subscribe((theme: any) => {
-        console.log(`Theme changed to ${theme.name}`);
+        // console.log(`Theme changed to ${theme.name}`);
       });
   }
   ngOnInit(): void {
